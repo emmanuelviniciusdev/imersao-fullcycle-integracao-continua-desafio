@@ -1,0 +1,13 @@
+name: imersao-fullcycle-integracao-continua-desafio
+on: 
+  pull_request:
+    branches:
+      - develop
+jobs:
+  integrate-application:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v4
+    - run: npm install
+    - run: npm run test
+  
+  # TODO: Setup SonarCloud.

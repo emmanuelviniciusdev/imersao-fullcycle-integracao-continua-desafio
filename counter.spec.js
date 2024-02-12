@@ -3,11 +3,6 @@ const Counter = require('./counter');
 it('should throw an error if decrement is called and value is 0', () => {
     const counter = new Counter();
 
-    /**
-     * ☠️
-     */
-    counter.increment();
-
     expect(() => counter.decrement()).toThrow('Value cannot be less than 0');
 });
 
